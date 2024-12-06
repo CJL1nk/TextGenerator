@@ -5,7 +5,7 @@
 * `prefix_length`:The length of the prefix to be used for text generation. The higher the value, the more likely it is to directly copy from the given texts. Recommended values are between 4-8, with the sweet spot being at around 6-7 in my experiences
 * `num_characters`: Number of characters to generate
 
-The program will sample from texts in the folder `Source Texts/`. Any file can be used in here to sample but I recommend plaintext files. Paste as many as you want
+The program will sample from texts in the folder `Source Texts/`. Any file can be used in here to sample but I recommend plaintext files. Paste as many as you want. Keep in mind longer text files will generally have "priority," meaning you'll be much less likely to see content from smaller text files as opposed to huge ones like movie scripts and such.
 
 ## Sample
 
