@@ -3,6 +3,7 @@ use std::env;
 use std::fs;
 use std::io::Read;
 use rand::seq::SliceRandom;
+use std::path::Path;
 
 fn main() {
 
@@ -10,6 +11,10 @@ fn main() {
 
 	let prefix_length: usize = res.0;
 	let num_chars:     i32 = res.1;
+
+	if !Path::new("Source Texts").exists() {
+		fs::create_dir_all("Source Texts");
+	}
 
 	generate_text(prefix_length, num_chars);
 
@@ -111,6 +116,10 @@ fn collect_texts() -> Vec<String> {
             }
         }
     }
+
+	if (file_names.len() == 0) {
+		panic!("Must add files to Source Texts");
+	}
 
 	return file_names;
 }
